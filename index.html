@@ -50,7 +50,18 @@
 
                         <div data-role="collapsible">
                             <h3>Copies</h3>
-                            <p>Section de la Richo</p>
+
+                            <label for="copyNBA4">Copies noir & blanc (A4): </label>
+                            <input type="number" name="copyNBA4" id="copyNBA4" data-mini="true" onChange="calcul()" value="0" />
+
+                            <label for="copyNBA3">Copies noir & blanc (A3): </label>
+                            <input type="number" name="copyNBA3" id="copyNBA3" data-mini="true" onChange="calcul()" value="0" />
+
+                            <label for="copyCA4">Copies couleur (A4): </label>
+                            <input type="number" name="copyCA4" id="copyCA4" data-mini="true" onChange="calcul()" value="0" />
+
+                            <label for="copyCA3">Copies couleur (A3): </label>
+                            <input type="number" name="copyCA3" id="copyCA3" data-mini="true" onChange="calcul()" value="0" />
                         </div>
 
                         <div data-role="collapsible">
@@ -79,10 +90,10 @@
                                 <option value="A4">A4</option>
                                 <option value="A3">A3</option>
                             </select>
-                            
+
                             <label for="dateL">Nombre de feuilles</label>
                             <input type="date" name="dateL" id="dateL" data-mini="true" onChange="calcul()" />
-                            
+
 
 
                         </div>
