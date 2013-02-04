@@ -198,16 +198,30 @@ function printC()
     {
         c = A4 + A3 * 2;
         
-        if(c < 30)
+        if(c < 10)
         {
-            return c * .4;
+            return c * .45;
         }
-                
-        else if(c < 100)
+        
+        else if(c < 30)
         {
-            return c * .35
+            return c * .4; 
         }
-                    
+            
+        else if(c < 101)
+        {
+            return c * .37;
+        }
+        
+        else if(c < 201)
+        {
+            return c * .35;
+        }
+            
+        else if(c < 400)
+        {
+            return c * .32;
+        }
         else 
         {
             return c * .3;
