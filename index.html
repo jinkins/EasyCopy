@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <link rel="stylesheet" href="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.css" />
+        <script src="http://code.jquery.com/jquery-1.8.2.min.js"></script>
+        <script src="http://code.jquery.com/mobile/1.2.0/jquery.mobile-1.2.0.min.js"></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
+        <script src="calcul.js"></script>
+        <title>Idécopy Calculateur</title>
+    </head>
+    <body>
+        <div data-role="page">
+            <div data-role="header"> 
+                <h2>Idécopy Calc</h2> 
+            </div> 
+
+            <div data-role="content">
+                <form method="post" action="">
+                    <div data-role="collapsible-set">
+
+                        <div data-role="collapsible">
+                            <h3>PC</h3>
+                            <label for="tempsPC">Temps PC</label>
+                            <input type="range" name="tempsPC" id="tempsPC" value="0" min="0" max="60" step="10" data-mini="true" onChange="calcul()" />
+
+                            <label for="ripNB">RIP NB</label>
+                            <input type="number" name="ripNB" id="ripNB" data-mini="true" onChange="calcul()" value="0" />
+
+                            <label for="ripNB">RIP Couleur</label>
+                            <input type="number" name="ripC" id="ripC" data-mini="true" onChange="calcul()" value="0" />
+                        </div>
+
+                        <div data-role="collapsible">
+                            <h3>Impressions</h3>
+
+
+                            <label for="printNBA4">Impression noir & blanc (A4): </label>
+                            <input type="number" name="printNBA4" id="printNBA4" data-mini="true" onChange="calcul()" value="0" />
+
+                            <label for="printNBA3">Impression noir & blanc (A3): </label>
+                            <input type="number" name="printNBA3" id="printNBA3" data-mini="true" onChange="calcul()" value="0" />
+
+                            <label for="printCA4">Impression couleur (A4): </label>
+                            <input type="number" name="printCA4" id="printCA4" data-mini="true" onChange="calcul()" value="0" />
+
+                            <label for="printCA3">Impression couleur (A3): </label>
+                            <input type="number" name="printCA3" id="printCA3" data-mini="true" onChange="calcul()" value="0" />
+                        </div>
+
+                        <div data-role="collapsible">
+                            <h3>Copies</h3>
+                            <p>Section de la Richo</p>
+                        </div>
+
+                        <div data-role="collapsible">
+                            <h3>Papier</h3>
+
+                            <label for="nbFeuilles">Nombre de feuilles</label>
+                            <input type="number" name="nbFeuilles" id="nbFeuilles" data-mini="true" value="0"  onChange="calcul()" />
+
+                            <label for="typePapier">Type de papier</label>
+                            <select>
+                                <optgroup label="Blanc">
+                                    <option value="90g">90 grammes</option>
+                                    <option value="120g">120 grammes</option>
+                                    <option value="160g">160 grammes</option>
+                                    <option value="200g">200 grammes</option>
+                                    <option value="250g">250 grammes</option>
+                                </optgroup>
+                                <optgroup label="Spéciaux">
+                                    <option value="siroPearl">Siro Pearl</option>
+                                    <option value="teinteNovo">Teinte Novo</option>
+                                </optgroup>
+                            </select>
+
+                            <label for="taillePapier">Taille de papier</label>
+                            <select>
+                                <option value="A4">A4</option>
+                                <option value="A3">A3</option>
+                            </select>
+                            
+                            <label for="dateL">Nombre de feuilles</label>
+                            <input type="date" name="dateL" id="dateL" data-mini="true" onChange="calcul()" />
+                            
+
+
+                        </div>
+
+
+
+                    </div>
+                    <div data-role="fieldcontain">
+                        <fieldset data-role="controlgroup" data-type="horizontal" data-mini="true" id="choixTarif" >
+                            <legend>Tarif :</legend>
+                            <input type="radio" name="tarif" id="aucun" value="Aucun" checked="checked" onClick="calcul()" />
+                            <label for="aucun">Aucun</label>
+
+                            <input type="radio" name="tarif" id="memoire" value="Memoire" onClick="calcul()"  />
+                            <label for="memoire">Mémoire</label>
+                        </fieldset>
+                    </div>
+                    <input type="reset" value="Reset" onClick="misea0()" data-mini="true" />
+                </form>
+            </div>
+            <div data-role="footer">
+                <h2>Total : <span id="montant">0</span>€ </h2>
+            </div>
+        </div>
+    </body>
+</html>
