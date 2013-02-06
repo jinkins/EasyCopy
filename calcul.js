@@ -227,6 +227,12 @@ function printC()
             return c * .3;
         }
     }
+    
+    else
+        {
+            alert("Problème dans le calcul des print couleur");
+            return null; 
+        }
 }
 
 
